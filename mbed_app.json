@@ -1,0 +1,70 @@
+{
+    "macros": [
+        "MBEDTLS_USER_CONFIG_FILE=\"mbedtls_entropy_config.h\""
+    ],
+    "config": {
+        "wifi-shield": {
+            "help": "Options are internal, WIFI_ESP8266, WIFI_IDW0XX1",
+            "value": "internal"
+        },
+        "wifi-ssid": {
+            "help": "WiFi SSID",
+            "value": "\"YOUR_WIFI_SSID_HERE\""
+        },
+        "wifi-password": {
+            "help": "WiFi Password",
+            "value": "\"YOUR_WIFI_PASSWORD_HERE\""
+        },
+        "wifi-tx": {
+            "help": "TX pin for serial connection to external device",
+            "value": "D1"
+        },
+        "wifi-rx": {
+            "help": "RX pin for serial connection to external device",
+            "value": "D0"
+        },
+        "wifi-spi_miso": {
+            "help": "SPI-MISO connection to external device",
+            "value": "PC_11"
+        },
+        "wifi-spi_mosi": {
+            "help": "SPI-MOSI connection to external device",
+            "value": "PC_12"
+        },
+        "wifi-spi_sclk": {
+            "help": "SPI-CLOCK connection to external device",
+            "value": "PC_10"
+        },
+        "wifi-spi_nss": {
+            "help": "SPI chip select of external device",
+            "value": "PE_0"
+        },
+        "wifi-reset": {
+            "help": "WIFI module reset pin",
+            "value": "PE_8"
+        },
+        "wifi-dataready": {
+            "help": "WIFI module data ready pin",
+            "value": "PE_1"
+        },
+        "wifi-wakeup": {
+            "help": "WIFI module wakeup pin",
+            "value": "PB_12"
+        },
+        "main-stack-size": {
+            "value": 7000
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "target.network-default-interface-type": "ETHERNET",
+            "nsapi.default-wifi-security": "WPA_WPA2",
+            "nsapi.default-wifi-ssid": "\"\"",
+            "nsapi.default-wifi-password": "\"\"",
+            "mbed-trace.enable": true,
+            "tls-socket.debug-level": 0,
+            "platform.stdio-baud-rate": 115200,
+            "platform.stdio-convert-newlines": false
+        }
+    }
+}
