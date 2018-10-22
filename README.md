@@ -11,7 +11,7 @@ In order to run the program on your STM32L475, you need to configure and compile
 Make sure you are logged in to your mbed.com account. You can easily import the program into the mbed online compiler using the following link: [Import the program into the compiler](https://os.mbed.com/compiler/#import:https://github.com/jankammerath/L475VG-IOT01A-Mbed-AWS-IoT/). You will afterwards see the program and it's code components, just as on GitHub. 
 
 ### Configure your AWS certificate and key
-You will need the certificate and the private key that AWS IoT created for your thing as well as the endpoint that can be found in the 'settings' section of AWS IoT. These information need to be inserted into the corresponding sections inside the configuration file [MQTT_server_setting.h](core/MQTT_server_setting.h).
+You will need the certificate and the private key that AWS IoT created for your thing as well as the endpoint that can be found in the *Settings* section of AWS IoT. These information need to be inserted into the corresponding sections inside the configuration file [MQTT_server_setting.h](core/MQTT_server_setting.h).
 
 ```
 const char MQTT_SERVER_HOST_NAME[] = "INSERT_THING_ENDPOINT_HERE.iot.eu-central-1.amazonaws.com";
